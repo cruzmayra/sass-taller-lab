@@ -1,0 +1,21 @@
+@mixin border-radius($radio)
+  -webkit-border-radius: $radio
+  -moz-border-radius: $radio
+  -ms-border-radius: $radio
+  -o-border-radius: $radio
+  border-radius: $radio
+
+//Mixin para añadir ancho maximo aun elemento
+@mixin max-width($maxwidth: $page-max-width)
+  max-width: $maxwidth
+  margin-left: auto
+  margin-right: auto
+
+//mixin para breakpoints
+@mixin respond-to($width)
+  @media only screen and(min-width: $width)
+    @content
+
+@mixin respond2-to($width)
+  @media only screen and(max-width: $width)
+    @content 
